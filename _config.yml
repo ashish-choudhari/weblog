@@ -26,6 +26,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jemoji
     
 # Archives
 jekyll-archives:
