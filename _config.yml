@@ -4,7 +4,7 @@ title: "Trinus corporation"
 description: "blog created with Jekyll template and Github pages"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: /trinus-ashish.github.io 
+baseurl: /trinus-ashish.github.io
 #google_analytics: 'UA-46278016-1'
 #disqus: 'demowebsite'
 #mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
@@ -15,9 +15,9 @@ permalink: /:title/
 authors:
   Ashish:
     name: Ashish
-    display_name: Sal
+    display_name: Trinus
     gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: wowthemesnet@gmail.com
+    email: ashish_choudhari@trinus.com
 
 # Plugins
 plugins:
