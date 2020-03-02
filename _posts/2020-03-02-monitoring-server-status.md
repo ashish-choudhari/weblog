@@ -89,33 +89,16 @@ echo -e 'n'
 /home/nz/scripts/Lock_monitor.csv -c $email_listcc $email_list
 
 ```
-<p align="center">
- <img src="http://s.4cdn.org/image/title/105.gif">
-   If we already know that we are at 90 we can decide about deleting old copies then move forward with out waiting to understand what really happened we have below script scheduled in our cron for daily execution we receive daily status updates, which helps us take action as soon as
-  <a href="#">Link 1</a> |
-  <a href="#">Link 2</a> |
-  <a href="#">Link 3</a>
-  <br><br>
-</p>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-<div class="container">
-    <article class="row single-post mt-5 no-gutters">
-        <div class="col-md-6">
-            <div class="image-wrapper float-left pr-3">
-                <img src="https://placeimg.com/150/150/animals" alt="">
-            </div>
-            <div class="single-post-content-wrapper p-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ad, ex eaque fuga minus reprehenderit asperiores earum incidunt. Possimus maiores dolores voluptatum enim soluta omnis debitis quam ab nemo necessitatibus.
-                <br><br>
-				<p align="center">
+<div style="Margin:20px;">
+            <img src="http://i.imgur.com/6bkt2Qk.gif" align="left" width="140" height="140" border="0" style="Margin:0 0 20px 20px; background:#E79851;" />
+            <p style="Margin:0; font:16px/1.25 sans-serif; color:#4CB3E8; text-align:justify;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, aut eligendi dignissimos, illum eaque ut architecto quisquam! Odio, aliquam eligendi iste tempore beatae, deserunt! Officia temporibus at, debitis excepturi porro mollitia aspernatur labore unde dolores quae blanditiis dignissimos error aut iure magnam sed placeat impedit incidunt praesentium natus dolorum.
+            <p align="center">
   <a href="#">Link 1</a> |
   <a href="#">Link 2</a> |
   <a href="#">Link 3</a>
   <br><br>
 </p>
-            </div>
-        </div>
-    </article>
+			</p>
 </div>
