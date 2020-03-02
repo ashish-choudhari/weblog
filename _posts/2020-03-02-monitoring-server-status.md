@@ -89,3 +89,14 @@ echo -e \'\\n\'
 /home/nz/scripts/Lock\_monitor.csv -c \$email\_listcc \$email\_list
 
 ```
+<p align="center">
+![]({{ site.baseurl }}/assets/images/12.jpg =50x50){: .align-left}
+Adding user Image with links.
+  <b>Some Links:</b><br>
+  <a href="#">Link 1</a> |
+  <a href="#">Link 2</a> |
+  <a href="#">Link 3</a>
+  <br><br>
+  <img src="http://s.4cdn.org/image/title/105.gif">
+</p>
+
