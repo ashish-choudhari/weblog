@@ -43,21 +43,16 @@ genstat can done by following way $i is the databsae name
 
 crontab can set like following.
 fields are separaeted by `spaces`.
-<style>
-td {
-    border: solid 2px lightgrey;
-}
-</style>
-<table style="border: 5px solid #990000; border-collapse: collapse">
 
+| --- + --- + ---- |
 | Discription  	| values 	|
-|--------------	|--------	|
+| ---	| ---	|
 | minute       	| 0-59   	|
 | hour         	| 0-23   	|
 | day of month 	| 1-31   	|
 | month        	| 1-12   	|
 | day of week  	| 0-7    	|
-
+| --- + --- + ---- |
 
 
 > */5 * * * * /bin/bash -lc '/home/nz/scripts/nz_groom_genstat.sh'
