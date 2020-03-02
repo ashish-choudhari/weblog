@@ -45,7 +45,7 @@ The cron I added is like this
 
 Finally, the script is added below
 
-```console
+```shellscript
 #Shell script to Generate Table skew  Report  on IBM Netezza System(nz_show_topology).
 #!/bin/sh
 # =============================================================================
