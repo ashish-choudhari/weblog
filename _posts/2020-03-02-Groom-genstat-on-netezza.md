@@ -22,9 +22,13 @@ There are optional params that can be used based on granularity you need.
 check based on your requirement.
 
 >-RECORDS READY – Reclaim and reorganize ungroomed records in the table and those tables previously groomed but marked for re-grooming. This is the default for clustered base tables.
+
 >-RECORDS ALL – Reclaim and reorganize all records in a table. This is the default for a non-CBT.
+
 >-PAGES ALL – clean up empty pages and free up disk extents.
+
 >-PAGES START – Identify and mark as ‘Empty’ leading data pages in the table with no visible record, stopping when it finds a data page that is not empty.
+
 >-VERSIONS – Migrate records to latest changes occured on the table.
 
 Let me walk through the few examples or groom commands here.
