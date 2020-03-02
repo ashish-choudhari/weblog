@@ -89,9 +89,9 @@ echo -e \'\\n\'
 /home/nz/scripts/Lock\_monitor.csv -c \$email\_listcc \$email\_list
 
 ```
+![]({{ site.baseurl }}/assets/images/12.jpg =50x50){: .align-left} If we already know that we are at 90 we can decide about deleting old copies then move forward with out waiting to understand what really happened we have below script scheduled in our cron for daily execution we receive daily status updates, which helps us take action as soon as
+we receive events.
 <p align="center">
-![]({{ site.baseurl }}/assets/images/12.jpg =50x50){: .align-left}
-Adding user Image with links.
   <b>Some Links:</b><br>
   <a href="#">Link 1</a> |
   <a href="#">Link 2</a> |
