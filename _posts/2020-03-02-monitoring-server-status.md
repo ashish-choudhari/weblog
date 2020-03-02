@@ -29,11 +29,11 @@ Recepints list inside `double quotes` separated by `commas`
 
 And `CC` list followed by if required for auditing purpose.
 
-`/nz/support/bin/nz\_show\_topology -l \|cut -d \'\|\' -f 1-4\| sed \'3d\' \| column -t`
+> /nz/support/bin/nz\_show\_topology -l\|cut -d \'\|\' -f 1-4\| sed \'3d\' \| column -t
 
 > Information about each Dslice which really help in case of any of them is crossed the threshold to avoid data partition is full error.
 
-`df -hP \| column -t \|tr -s \'\\t\' \'\|\'`
+> df -hP \| column -t \|tr -s \'\\t\' \'\|\'
 
 for linux `partition` if there is case of status is needed.
 
@@ -55,35 +55,6 @@ export email_listcc="auditid@comapny.com"
 
 echo -e \'\\n\'
 
-echo -e
-\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
-
-\#\#Dead lock on Database
-
-echo \'Dead Lock on Database status of each database.\'
-
-nzsql -d EDW\_SS\_PROD -F\' \| \' -c \"select sessionid,
-clientip,username, relname as table\_name, requesttime as
-lock\_request\_time,granttime as lock\_acquired\_time, command as sql,
-lockstate from \_t\_pg\_locks where relid in ( select relid from
-\_t\_pg\_locks where lockstate=\'WAIT\') order by requesttime, granttime
-\";
-
-echo -e \'\\n\'
-
-echo -e
-\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
-
-\#\#Locks on database
-
-echo \'Attached is deatailed Lock status.\'
-
-nzsql -d EDW\_SS\_PROD -o /home/nz/scripts/Lock\_monitor.csv -F\'\|\' -c
-\"select sessionid, clientip,username, relname as table\_name,
-requesttime as lock\_request\_time,granttime as lock\_acquired\_time,
-command as sql, lockstate from \_t\_pg\_locks ;\"
-
-echo -e \'\\n\'
 
 echo -e
 \'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
@@ -92,8 +63,7 @@ echo \'Storage Report per Dslice.\'
 
 echo -e \'\\n\'
 
-/nz/support-IBM\_Netezza-7.1.0.5-150324-2105/bin/nz\_show\_topology -l
-\|cut -d \'\|\' -f 1-4\| sed \'3d\' \| column -t
+/nz/support/bin/nz\_show\_topology -l\|cut -d \'\|\' -f 1-4\| sed \'3d\' \| column -t
 
 echo -e \'\\n\'
 
