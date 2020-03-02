@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Daily server status"
+author: ashish
+categories: [ bat, network ]
+image: assets/images/9.jpg
+---
 Monitoring the server is very important task but if you can receive the
 status and updates daily when you wake it can be very good.
 
@@ -37,59 +44,38 @@ The cron I added is like this
 Finally, the script is added below
 
 ```shell
-\#Shell script to Generate Table skew Report on IBM Netezza
-System(nz\_show\_topology).
+#Shell script to Generate Table skew  Report  on IBM Netezza System(nz_show_topology).
+#!/bin/sh
+# =============================================================================
+# Netezza System Status Script 
+# =============================================================================
+export email_list="emailid1@company.com,emailid2@comapany.com"
+export email_listcc="auditid@comapny.com"
 
-\#!/bin/sh
+(echo -e '\n'
+echo -e '\n' 
+echo -e '########################################################################################################################' 
+##Dead lock on Database
+echo 'Dead Lock on Database status of each database.'
+nzsql -d EDW_SS_PROD   -F' | ' -c   "select sessionid, clientip,username, relname as table_name, requesttime as lock_request_time,granttime as lock_acquired_time, command as sql, lockstate from _t_pg_locks where relid in ( select relid  from _t_pg_locks where lockstate='WAIT') order by requesttime, granttime ";
+echo -e '\n'
+echo -e '########################################################################################################################' 
+##Locks on database
+echo 'Attached is deatailed Lock status.'
+nzsql -d EDW_SS_PROD -o /home/nz/scripts/Lock_monitor.csv   -F'|' -c   "select sessionid, clientip,username, relname as table_name, requesttime as lock_request_time,granttime as lock_acquired_time, command as sql, lockstate from _t_pg_locks ;"
+echo -e '\n'
+echo -e '########################################################################################################################' 
+echo  'Storage Report per Dslice.'
+echo -e '\n' 
+/nz/support-IBM_Netezza-7.1.0.5-150324-2105/bin/nz_show_topology -l |cut -d '|' -f 1-4| sed '3d' |  column -t 
+echo -e '\n' 
+echo -e '########################################################################################################################' 
+echo 'Storage Space available .'
+echo -e '\n' 
+df -hP | column -t |tr -s '\t' '|'
+echo -e '\n' 
+echo -e '########################################################################################################################' 
+echo -e '\n' 
+) | /bin/mailx -s "Netezza system status report" -a /home/nz/scripts/Lock_monitor.csv -c $email_listcc $email_list 
 
-\# Netezza System Status Script
-
-\#
-=============================================================================
-
-\# Distribution lists
-
-\#
-
-export email\_list=\"mailid1\@company.com,mailid2\@company.com\"
-
-export email\_listcc=\"mailid\_cced\@comany.com\"
-
-(echo -e \'\\n\'
-
-echo -e \'\\n\'
-
-echo -e
-\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
-
-echo -e
-\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
-
-echo \'Storage Report per Dslice.\'
-
-echo -e \'\\n\'
-
-/nz/support/bin/nz\_show\_topology -l \|cut -d \'\|\' -f 1-4\| sed
-\'3d\' \| column -t
-
-echo -e \'\\n\'
-
-echo -e
-\'\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--\'
-
-echo \'Storage Space available .\'
-
-echo -e \'\\n\'
-
-df -hP \| column -t \|tr -s \'\\t\' \'\|\'
-
-echo -e \'\\n\'
-
-echo -e
-\'\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--\'
-
-echo -e \'\\n\'
-
-) \| /bin/mailx -s \"Netezza system status report\" -c \$email\_listcc
-\$email\_list
 ```
