@@ -89,16 +89,15 @@ echo -e 'n'
 /home/nz/scripts/Lock_monitor.csv -c $email_listcc $email_list
 
 ```
-
 <div style="Margin:20px;">
-            <img src="http://i.imgur.com/6bkt2Qk.gif" align="left" width="140" height="140" border="0" style="Margin:0 0 20px 20px; background:#E79851;" />
-            <p style="Margin:0; font:16px/1.25 sans-serif; color:#4CB3E8; text-align:justify;">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, aut eligendi dignissimos, illum eaque ut architecto quisquam! Odio, aliquam eligendi iste tempore beatae, deserunt! Officia temporibus at, debitis excepturi porro mollitia aspernatur labore unde dolores quae blanditiis dignissimos error aut iure magnam sed placeat impedit incidunt praesentium natus dolorum.
-            <p align="center">
-  <a href="#">Link 1</a> |
-  <a href="#">Link 2</a> |
-  <a href="#">Link 3</a>
-  <br><br>
-</p>
+            <img src="({{ site.baseurl }}/assets/images/avatar.jpg)" align="left" width="100" height="100" border="0" style="Margin:0 20px 20px 20px; background:#E79851;" />
+            <p style="Margin:10px 20px 20px 20px; font:16px/1.25 sans-serif; color:#4CB3E8; text-align:justify;">
+               Trinus Corporation is a leading provider of technology solutions and services. With over two decades of experience, we enable our clients gain competitive advantage and superior business outcomes through cutting-edge, data-driven digital transformation solutions.
+            <p align="right">
+              <a href="linkedin.com/in/mannara-technologies-recruitment-team-1947495b">LinkedIn</a> |
+              <a href="#">Link 2</a> |
+              <a href="#">Link 3</a>
+              <br><br>
+            </p>
 			</p>
 </div>
