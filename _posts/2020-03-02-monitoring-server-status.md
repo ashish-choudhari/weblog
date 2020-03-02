@@ -85,8 +85,7 @@ echo -e
 
 echo -e 'n'
 
-) | /bin/mailx -s "Netezza system status report" -a
-/home/nz/scripts/Lock_monitor.csv -c $email_listcc $email_list
+) | /bin/mailx -s "Netezza system status report" -c $email_listcc $email_list
 
 ```
 <div style="Margin:20px;">
