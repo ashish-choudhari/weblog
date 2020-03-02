@@ -45,7 +45,7 @@ The cron I added is like this
 
 Finally, the script is added below
 
-``shell
+```console
 #Shell script to Generate Table skew  Report  on IBM Netezza System(nz_show_topology).
 #!/bin/sh
 # =============================================================================
@@ -118,7 +118,7 @@ echo -e \'\\n\'
 ) \| /bin/mailx -s \"Netezza system status report\" -a
 /home/nz/scripts/Lock\_monitor.csv -c \$email\_listcc \$email\_list
 
-``
+```
 <div style="Margin:20px;">
             <img src="/assets/images/avatar.png" align="left" width="100" height="100" border="0" style="Margin:0 20px 20px 20px; background:#E79851;" />
             <p style="Margin:10px 20px 20px 20px; font:16px/1.25 sans-serif; color:#4CB3E8; text-align:justify;">
