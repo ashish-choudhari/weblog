@@ -3,7 +3,7 @@ layout: post
 title:  "Daily server status"
 author: ashish
 categories: [ bat, network ]
-image: assets/images/9.jpg
+image: assets/images/12.jpg
 ---
 Monitoring the server is very important task but if you can receive the
 status and updates daily when you wake it can be very good.
