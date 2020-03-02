@@ -89,16 +89,12 @@ echo -e \'\\n\'
 /home/nz/scripts/Lock\_monitor.csv -c \$email\_listcc \$email\_list
 
 ```
-
 <p align="center">
  <img src="http://s.4cdn.org/image/title/105.gif">
-  <b>Some Links:</b>
    If we already know that we are at 90 we can decide about deleting old copies then move forward with out waiting to understand what really happened we have below script scheduled in our cron for daily execution we receive daily status updates, which helps us take action as soon as
-  <br>
   <a href="#">Link 1</a> |
   <a href="#">Link 2</a> |
   <a href="#">Link 3</a>
   <br><br>
- 
 </p>
 
