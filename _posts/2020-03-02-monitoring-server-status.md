@@ -53,40 +53,70 @@ Finally, the script is added below
 # =============================================================================
 export email_list="emailid1@company.com,emailid2@comapany.com"
 export email_listcc="auditid@comapny.com"
-(echo -e 'n'
+(echo -e \'\\n\'
 
-echo -e 'n'
-
-
-echo -e
-'########################################################################################################################'
-
-echo 'Storage Report per Dslice.'
-
-echo -e 'n'
-
-/nz/support/bin/nz_show_topology -l|cut -d '|' -f 1-4| sed '3d' | column -t
-
-echo -e 'n'
+echo -e \'\\n\'
 
 echo -e
-'########################################################################################################################'
+\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
 
-echo 'Storage Space available .'
+\#\#Dead lock on Database
 
-echo -e 'n'
+echo \'Dead Lock on Database status of each database.\'
 
-df -hP | column -t |tr -s 't' '|'
+nzsql -d EDW\_SS\_PROD -F\' \| \' -c \"select sessionid,
+clientip,username, relname as table\_name, requesttime as
+lock\_request\_time,granttime as lock\_acquired\_time, command as sql,
+lockstate from \_t\_pg\_locks where relid in ( select relid from
+\_t\_pg\_locks where lockstate=\'WAIT\') order by requesttime, granttime
+\";
 
-echo -e 'n'
+echo -e \'\\n\'
 
 echo -e
-'########################################################################################################################'
+\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
 
-echo -e 'n'
+\#\#Locks on database
 
-) | /bin/mailx -s "Netezza system status report" -a
-/home/nz/scripts/Lock_monitor.csv -c $email_listcc $email_list
+echo \'Attached is deatailed Lock status.\'
+
+nzsql -d EDW\_SS\_PROD -o /home/nz/scripts/Lock\_monitor.csv -F\'\|\' -c
+\"select sessionid, clientip,username, relname as table\_name,
+requesttime as lock\_request\_time,granttime as lock\_acquired\_time,
+command as sql, lockstate from \_t\_pg\_locks ;\"
+
+echo -e \'\\n\'
+
+echo -e
+\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
+
+echo \'Storage Report per Dslice.\'
+
+echo -e \'\\n\'
+
+/nz/support-IBM\_Netezza-7.1.0.5-150324-2105/bin/nz\_show\_topology -l
+\|cut -d \'\|\' -f 1-4\| sed \'3d\' \| column -t
+
+echo -e \'\\n\'
+
+echo -e
+\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
+
+echo \'Storage Space available .\'
+
+echo -e \'\\n\'
+
+df -hP \| column -t \|tr -s \'\\t\' \'\|\'
+
+echo -e \'\\n\'
+
+echo -e
+\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
+
+echo -e \'\\n\'
+
+) \| /bin/mailx -s \"Netezza system status report\" -a
+/home/nz/scripts/Lock\_monitor.csv -c \$email\_listcc \$email\_list
 
 ```
 <div style="Margin:20px;">
