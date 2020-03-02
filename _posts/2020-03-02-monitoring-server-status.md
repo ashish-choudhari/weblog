@@ -98,3 +98,24 @@ echo -e \'\\n\'
   <br><br>
 </p>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+<div class="container">
+    <article class="row single-post mt-5 no-gutters">
+        <div class="col-md-6">
+            <div class="image-wrapper float-left pr-3">
+                <img src="https://placeimg.com/150/150/animals" alt="">
+            </div>
+            <div class="single-post-content-wrapper p-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ad, ex eaque fuga minus reprehenderit asperiores earum incidunt. Possimus maiores dolores voluptatum enim soluta omnis debitis quam ab nemo necessitatibus.
+                <br><br>
+				<p align="center">
+  <a href="#">Link 1</a> |
+  <a href="#">Link 2</a> |
+  <a href="#">Link 3</a>
+  <br><br>
+</p>
+            </div>
+        </div>
+    </article>
+</div>
