@@ -2,7 +2,7 @@
 layout: post
 title:  "Daily server status"
 author: ashish
-categories: [ bat, network ]
+categories: [ bat, Netezza,Status ]
 image: assets/images/12.jpg
 ---
 Monitoring the server is very important task but if you can receive the
