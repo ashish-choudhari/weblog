@@ -41,6 +41,8 @@ The cron I added is like this
 
 > \*/5 \* \* \* \* /bin/bash -lc \'/home/nz/scripts/nz\_system\_state.sh\'
 
+![walking]({{ site.baseurl }}/assets/images/12.jpg)
+
 Finally, the script is added below
 
 ```shell
