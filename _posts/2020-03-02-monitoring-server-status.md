@@ -98,5 +98,6 @@ echo -e 'n'
               <a href="#">Link 3</a>
               <br><br>
             </p>
+			[Ashish](mailto:ashish_choudhari@trinus.com?subject=[Trinus blogg])
 			</p>
 </div>
