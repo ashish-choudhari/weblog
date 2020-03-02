@@ -65,7 +65,7 @@ clear
 cd ~/scripts/backups
 GROOMGENSTATCMD="date +%Y%m%d-%H%M%S"
 GROOMGENSTATLOG=./logs/groom_genstat.$($GROOMGENSTATCMD)
-export email_list="amit_ranawade@trinus.com,ashish_choudhari@trinus.com"
+export email_list="email1@company.com,email2@company.com"
 NOWT=$(date +"_%Y_%m_%d_%I_%M_%p")
 {
 
@@ -106,6 +106,6 @@ echo End generate stats: $(date) >> $GROOMGENSTATLOG
               <a href="#">Link 3</a>
               <br><br>
             </p>
-			[Ashish](mailto:ashish_choudhari@trinus.com?subject=[Trinus blogg])
 			</p>
 </div>
+[Ashish](mailto:ashish_choudhari@trinus.com?subject=[Trinus blogg])
