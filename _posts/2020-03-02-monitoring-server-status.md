@@ -23,23 +23,23 @@ we receive events.
 
 Let me walk through the few important commands here.
 
-`email\_list =""`
+`email_list =""`
 
 Recepints list inside `double quotes` separated by `commas`
 
 And `CC` list followed by if required for auditing purpose.
 
-> /nz/support/bin/nz\_show\_topology -l\|cut -d \'\|\' -f 1-4\| sed \'3d\' \| column -t
+> /nz/support/bin/nz_show_topology -l|cut -d '|' -f 1-4| sed '3d' | column -t
 
 > Information about each Dslice which really help in case of any of them is crossed the threshold to avoid data partition is full error.
 
-> df -hP \| column -t \|tr -s \'\\t\' \'\|\'
+> df -hP | column -t |tr -s 't' '|'
 
 for linux `partition` if there is case of status is needed.
 
 The cron I added is like this
 
-> \*/5 \* \* \* \* /bin/bash -lc \'/home/nz/scripts/nz\_system\_state.sh\'
+> */5 * * * * /bin/bash -lc '/home/nz/scripts/nz_system_state.sh'
 
 ![walking]({{ site.baseurl }}/assets/images/12.jpg)
 
@@ -53,40 +53,40 @@ Finally, the script is added below
 # =============================================================================
 export email_list="emailid1@company.com,emailid2@comapany.com"
 export email_listcc="auditid@comapny.com"
-(echo -e \'\\n\'
+(echo -e 'n'
 
-echo -e \'\\n\'
+echo -e 'n'
 
-
-echo -e
-\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
-
-echo \'Storage Report per Dslice.\'
-
-echo -e \'\\n\'
-
-/nz/support/bin/nz\_show\_topology -l\|cut -d \'\|\' -f 1-4\| sed \'3d\' \| column -t
-
-echo -e \'\\n\'
 
 echo -e
-\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
+'########################################################################################################################'
 
-echo \'Storage Space available .\'
+echo 'Storage Report per Dslice.'
 
-echo -e \'\\n\'
+echo -e 'n'
 
-df -hP \| column -t \|tr -s \'\\t\' \'\|\'
+/nz/support/bin/nz_show_topology -l|cut -d '|' -f 1-4| sed '3d' | column -t
 
-echo -e \'\\n\'
+echo -e 'n'
 
 echo -e
-\'\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\'
+'########################################################################################################################'
 
-echo -e \'\\n\'
+echo 'Storage Space available .'
 
-) \| /bin/mailx -s \"Netezza system status report\" -a
-/home/nz/scripts/Lock\_monitor.csv -c \$email\_listcc \$email\_list
+echo -e 'n'
+
+df -hP | column -t |tr -s 't' '|'
+
+echo -e 'n'
+
+echo -e
+'########################################################################################################################'
+
+echo -e 'n'
+
+) | /bin/mailx -s "Netezza system status report" -a
+/home/nz/scripts/Lock_monitor.csv -c $email_listcc $email_list
 
 ```
 <p align="center">
