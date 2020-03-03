@@ -101,7 +101,61 @@ echo End generate stats: $(date) >> $GROOMGENSTATLOG
             <img src="/assets/images/avatar_ashish.jpg" align="left" width="100" height="100" border="0" style="Margin:0 20px 20px 20px; background:#E79851;" />
             <p style="Margin:10px 20px 20px 20px; font:16px/1.25 sans-serif; color:#4CB3E8; text-align:justify;">
                Trinus Corporation is a leading provider of technology solutions and services. With over two decades of experience, we enable our clients gain competitive advantage and superior business outcomes through cutting-edge, data-driven digital transformation solutions.
-            <p align="right">
+            <br>
+			<div class=WordSection1>
+
+<p style='margin:0cm;margin-bottom:.0001pt;background:white'><b><span
+lang=EN-US style='font-size:9.0pt;font-family:"inherit",serif;color:#1F3864;
+mso-ansi-language:EN-US'>Thanks &amp; Regards.</span></span></b><span
+style='font-family:"Calibri",sans-serif;color:black'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;background:white;font-variant-ligatures: normal;
+font-variant-caps: normal;orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px'><b><span data-ogsc="rgb(31, 56, 100)" style='font-style:inherit;
+font-variant:inherit;font-weight:inherit;font-stretch: inherit;line-height:
+inherit'><span lang=EN-US style='font-size:9.0pt;font-family:"inherit",serif;
+color:#1F3864;mso-ansi-language:EN-US'>Ashish <span
+style='mso-spacerun:yes'> </span>Choudhari.</span></span></b><span
+style='font-family:"Calibri",sans-serif;color:black'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;background:white;font-variant-ligatures: normal;
+font-variant-caps: normal;orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px'><span data-ogsc="rgb(192, 0, 0)" style='font-style:inherit;font-variant:
+inherit;font-weight:inherit;font-stretch: inherit;line-height:inherit'><span
+lang=EN-US style='font-size:9.0pt;font-family:"inherit",serif;color:#C00000;
+mso-ansi-language:EN-US'>Trinus Corporation | +91 8806779802 | Mobile |&nbsp;</span></span><span
+data-ogsc="rgb(192, 0, 0)" style='font-style:inherit;font-variant:inherit;
+font-weight:inherit;font-stretch: inherit;line-height:inherit'><span
+lang=EN-US style='font-size:9.0pt;font-family:"Calibri",sans-serif;color:#C00000;
+mso-ansi-language:EN-US'><a href="http://www.trinus.com/" target="_blank"
+data-auth=NotApplicable data-ogsc="">www.trinus.com</a></span></span><span
+style='font-family:"Calibri",sans-serif;color:black'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;background:white;font-variant-ligatures: normal;
+font-variant-caps: normal;orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px'><span data-ogsc="rgb(192, 0, 0)" style='font-style:inherit;font-variant:
+inherit;font-weight:inherit;font-stretch: inherit;line-height:inherit'><span
+style='font-size:9.0pt;font-family:"inherit",serif;color:#C00000'>Digital
+Transformation | Digital Services | IT Consulting | Data Analytics, IoT, AI</span></span><span
+style='font-family:"Calibri",sans-serif;color:black'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;background:white;font-variant-ligatures: normal;
+font-variant-caps: normal;orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;background-image:
+initial;word-spacing:0px'><span data-ogsc="rgb(192, 0, 0)" style='font-style:
+inherit;font-variant:inherit;font-weight:inherit;font-stretch: inherit;
+line-height:inherit;background-image:initial'><span lang=EN-US
+style='font-size:9.0pt;font-family:"inherit",serif;color:#C00000;mso-ansi-language:
+EN-US'>Certified MBE/WBE/SBE/SDB</span></span><span style='font-family:"Calibri",sans-serif;
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+			<p align="right">
               <a href="linkedin.com/in/mannara-technologies-recruitment-team-1947495b">LinkedIn</a> |
               <a href="#">Link 2</a> |
               <a href="#">Link 3</a>
