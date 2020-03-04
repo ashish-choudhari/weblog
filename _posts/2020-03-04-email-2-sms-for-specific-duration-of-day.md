@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Netezza Groom and Genstat"
+title:  "Email to SMS"
 author: ashish
 categories: [ SMS, python,email,sms_gateway ]
 image: assets/images/7.jpg
