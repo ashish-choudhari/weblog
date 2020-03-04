@@ -2,17 +2,21 @@
 layout: post
 title:  "Netezza Groom and Genstat"
 author: ashish
-categories: [ Bash, Netezza,Groom,Gen_stat ]
+categories: [ SMS, python,email,sms_gateway ]
 image: assets/images/10.jpg
 ---
-`Netezza` is high performance hardware and a database query engine designed for massively parallel processing, data warehousing and analytics
+> This blogg is under construction,there will be changes being updated as i add. 
 
-Netezza needs some performance tuning overtime as some leftovers in system starts degrading the performance.
+There was a time when mobile_no@carrier_id used to send Emaail content via SMS reasonably cheaper as was avaialble to no day its very rare cost some extra.
 
-Netezza generates the plans for query execution which are highly dependent on the statestics collected on tables,which helps optimizing query performance.
+We received the strange requiremwnt from the client they liked to receive email contents by sms it was possible but there was somthing extra they needed.
 
-plans get outdated as soon as any `DML` opeartion is performed on the Database,sadly the netezza did not provide any scheduled mechanism to generate this statestics.but these thing also depends on the frequeny the data is manupulated.so we can build the script as per our requirement,i am attaching the example here.
+that was they wnated to receive this only for morning two hours when they could not acces their mail box,and they liked to receive some emergency alerts right away,so part of solution for this requirement we developed script as POC.
 
+better choice to achieve this we went ahead with python,
+
+i will be adding walk through example that we managed to pull with google search(by deviding problem to chunks and then adding al-together)
+ 
 second thing whenever any `DML` occure on the Database the netezza maintane the records that hold active and passive records,even if we delete the record deleted records is maintained when actually hold space which results in out of date statestics and space and there is second utility that can help here is Grooming netezza `database/table`.
 
  _Please check your backup mechanism before running groom it can force the full backup if diff back are run_**.
