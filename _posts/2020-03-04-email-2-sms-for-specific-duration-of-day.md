@@ -5,7 +5,7 @@ author: ashish
 categories: [ SMS, python,email,sms_gateway ]
 image: assets/images/7.jpg
 ---
-> This blogg is under construction,there will be changes being updated as i add. 
+> This blog is under construction,there will be changes being updated as i add. 
 
 > Apologies for spelling  mistakes,sometimes i add/forget word in writing flow
 
@@ -17,9 +17,9 @@ that was they wanted to receive this only for morning two hours when they could 
 
 better choice to achieve this we went ahead with python,
 
-i will be adding walk through example that we managed to pull with Google search(by dividing problem to chunks and then adding al-together)
+i will be adding walk through example that we managed to pull with Google search(by dividing problem to chunks and then adding all-together)
 
-> from tkinter import *	for some gui capability
+> from tkinter import *	for some GUI capability
 > from tkinter.ttk import * 	--\\--
 > import pickle 	secretly storing credential- because we were thinking keep running this script on server.
 > import datetime 	for getting latest emails(date-time they received).
