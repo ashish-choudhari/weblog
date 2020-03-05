@@ -11,7 +11,7 @@ image: assets/images/7.jpg
 
 There was a time when mobile_no@carrier_id used to send Emaail content via SMS reasonably cheaper as was avaialble to no day its very rare cost some extra.
 
-We received the strange requiremwnt from the client they liked to receive email contents by sms it was possible but there was somthing extra they needed.
+We received the strange requiremwnt from the client they wanted to receive email contents by sms it was possible but there was something extra they needed.
 
 that was they wnated to receive this only for morning two hours when they could not acces their mail box,and they liked to receive some emergency alerts right away,so part of solution for this requirement we developed script as POC.
 
