@@ -11,15 +11,15 @@ image: assets/images/7.jpg
 
 There was a time when mobile_no@carrier_id used to send Email content via SMS reasonably cheaper as was available to no day its very rare cost some extra.
 
-------------
+[========]
 
 We received the strange requirement from the client they wanted to receive email contents by sms it was possible but there was something extra they needed.
 
-------------
+[========]
 
 that was they wanted to receive this only for morning two hours when they could not access their mail box,and they liked to receive some emergency alerts right away,so part of solution for this requirement we developed script as POC.
 
-------------
+[========]
 
 better choice to achieve this we went ahead with python,
 
@@ -69,25 +69,25 @@ def strip_empty_lines(s):
 
 ```
 
-------------
+[========]
 
 > mail.select(FOLDER_NAME)
 
 `FOLDER_NAME` is used to scan specific folder for for conversion.
 
-------------
+[========]
 
 > result, data = mail.uid('search', None, "UNSEEN")
 
 `UNSEEN` for reading only unread mails.
 
-------------
+[========]
 
 > if pycron.is_now(CRONTAB):
 
 `CRONTAB` will open if action only if current schedule fall under the cron schedule.
 
-------------
+[========]
 
 Below is the code snippet for SMS gateway.
 
@@ -102,7 +102,7 @@ print(response.text
 url : This endpoint for SMS gateway
 querystring : is the request to sms gateway
 
-------------
+[========]
 
  - "authorization":"autherisation_key" API key from SMS gateway
  - "sender_id":"FSTSMS"	Sender Id
