@@ -90,13 +90,11 @@ querystring : is the request to sms gateway
 
 **Table of Contents**
 
-[TOCM]
-
 [TOC]
 
 #"authorization":"autherisation_key"	API key from SMS gateway
 ##"sender_id":"FSTSMS"	Sender Id
-##"message":subject+"\n"+body_txt[0:int(character_limit)]  Adding subject and body text will stripped to character_limit i.e. 140 chars counted in 1 SMS
+##"message":subject+"\n"+body_txt[0:int(character_limit)] Adding subject and body text will stripped to character_limit i.e. 140 chars counted in 1 SMS
 ##"language":"english" This is unicode or ASCII
 ##"route":"p" Mode of sending promotional/Transactional (Promotional have some restrictions i.e. will not delivered in night)
 ##"numbers":mobileto Mobile nos separated by by commas
