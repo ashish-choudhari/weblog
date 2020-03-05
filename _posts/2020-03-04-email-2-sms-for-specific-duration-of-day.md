@@ -7,17 +7,17 @@ image: assets/images/7.jpg
 ---
 > This blogg is under construction,there will be changes being updated as i add. 
 
-> Apologies for spelling  mistaks,sometimes i add/forget word in writing flow
+> Apologies for spelling  mistakes,sometimes i add/forget word in writing flow
 
-There was a time when mobile_no@carrier_id used to send Emaail content via SMS reasonably cheaper as was avaialble to no day its very rare cost some extra.
+There was a time when mobile_no@carrier_id used to send Email content via SMS reasonably cheaper as was available to no day its very rare cost some extra.
 
-We received the strange requiremwnt from the client they wanted to receive email contents by sms it was possible but there was something extra they needed.
+We received the strange requirement from the client they wanted to receive email contents by sms it was possible but there was something extra they needed.
 
-that was they wnated to receive this only for morning two hours when they could not acces their mail box,and they liked to receive some emergency alerts right away,so part of solution for this requirement we developed script as POC.
+that was they wanted to receive this only for morning two hours when they could not access their mail box,and they liked to receive some emergency alerts right away,so part of solution for this requirement we developed script as POC.
 
 better choice to achieve this we went ahead with python,
 
-i will be adding walk through example that we managed to pull with google search(by deviding problem to chunks and then adding al-together)
+i will be adding walk through example that we managed to pull with Google search(by dividing problem to chunks and then adding al-together)
 
 > from tkinter import *	for some gui capability
 > from tkinter.ttk import * 	--\\--
@@ -33,7 +33,7 @@ i will be adding walk through example that we managed to pull with google search
 > import sys	for local system operations
 > import os	--\\--
 
-some fuctions to perform cleanup opearations
+some functions to perform cleanup operations
 
 ```python
 
@@ -65,7 +65,7 @@ def strip_empty_lines(s):
 
 > mail.select(FOLDER_NAME)
 
-`FOLDER_NAME` is used to scan specific folder for for cnversion.
+`FOLDER_NAME` is used to scan specific folder for for conversion.
 
 > result, data = mail.uid('search', None, "UNSEEN")
 
@@ -98,7 +98,7 @@ querystring : is the request to sms gateway
 ### Adding subject and body text will stripped to character_limit i.e. 140 chars counted in 1 SMS
 ##"language":"english" This is unicode or ASCII
 ##"route":"p" Mode of sending promotional/Transactional (Promotional have some restrictions i.e. will not delivered in night)
-##"numbers":mobileto Mobile nos separaed by by commas
+##"numbers":mobileto Mobile nos separated by by commas
 
 Create pickle inside working directory if not created will be updated by program later
 
