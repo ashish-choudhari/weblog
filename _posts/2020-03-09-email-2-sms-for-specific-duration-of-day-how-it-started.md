@@ -9,8 +9,24 @@ image: assets/images/7.jpg
 
 > Apologies for spelling  mistakes,sometimes i add/forget words while writing in flow
 
-Step 1 to receive the mails.
-Step 2 to receive unseen mail
+Step 1 to receive the mails.[here](#Step-1)
+Step 2 to receive unseen mail.[here](#Step-2)
+Step 3 receive mail from specific folder.[here](#Step-3)
+Step 4 Loop mails needs to be processed.[here](#Step-4)
+Step 5 Format mail t plain text content[here](#Step-5)
+Step 6 Setup SMS gateway.[here](#Step-6)
+Step 7 Schedule mail for specific duration from day.[here](#Step-7)
+Step 8 mark mails to seen only apart from specific duration W/O processing.[here](#Step-8)
+
+### Step 1
+### Step 2
+### Step 3
+### Step 4
+### Step 5
+### Step 6
+### Step 7
+### Step 8
+### Step 9
 
 
 There was a time when mobile_no@carrier_id used to send Email content via SMS reasonably cheaper as was available to no day its very rare cost some extra.
