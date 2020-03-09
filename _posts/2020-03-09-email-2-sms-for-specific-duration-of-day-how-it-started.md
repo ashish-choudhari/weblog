@@ -10,22 +10,78 @@ image: assets/images/7.jpg
 > Apologies for spelling  mistakes,sometimes i add/forget words while writing in flow
 
 Step 1 to receive the mails.[here](#Step-1)
+
 Step 2 to receive unseen mail.[here](#Step-2)
+
 Step 3 receive mail from specific folder.[here](#Step-3)
+
 Step 4 Loop mails needs to be processed.[here](#Step-4)
+
 Step 5 Format mail t plain text content[here](#Step-5)
+
 Step 6 Setup SMS gateway.[here](#Step-6)
+
 Step 7 Schedule mail for specific duration from day.[here](#Step-7)
+
 Step 8 mark mails to seen only apart from specific duration W/O processing.[here](#Step-8)
 
+
 ### Step 1
+
+```python
+import email
+import imaplib
+mail = imaplib.IMAP4_SSL('outlook.office365.com')
+(retcode, capabilities) = mail.login('email_sender@company.com','password')
+mail.list()
+mail.select('inbox')
+
+n=0
+(retcode, messages) = mail.search(None, '(UNSEEN)')
+if retcode == 'OK':
+
+for num in messages[0].split() :
+print ('Processing ')
+n=n+1
+typ, data = mail.fetch(num,'(RFC822)')
+for response_part in data:
+if isinstance(response_part, tuple):
+original = email.message_from_bytes(response_part[1])
+
+print (original['From'])
+print (original['Subject'])
+raw_email = data[0][1]
+raw_email_string = raw_email.decode('utf-8')
+email_message = email.message_from_string(raw_email_string)
+for part in email_message.walk():
+if part.get_content_type() == "text/plain":
+body = part.get_payload(decode=True)
+file_name = "email_" + str(x) + ".txt"
+output_file = open(file_name, 'w')
+output_file.write("From: %s\nTo: %s\nDate: %s\nSubject: %s\n\nBody: \n\n%s" %(email_from, email_to,local_message_date, subject, body.decode('utf-8')))
+output_file.close()
+else:
+continue
+
+typ, data = mail.store(num,'+FLAGS','\\Seen')
+
+print (n)
+```
+
 ### Step 2
+
 ### Step 3
+
 ### Step 4
+
 ### Step 5
+
 ### Step 6
+
 ### Step 7
+
 ### Step 8
+
 ### Step 9
 
 
