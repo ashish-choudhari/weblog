@@ -70,6 +70,16 @@ print (n)
 <br>
 ###Step 2
 
+Search criteria from below will be used for `UNSEEN` or `UNREAD` so accomplished already.
+
+```python
+
+n=0
+(retcode, messages) = mail.search(None, '(UNSEEN)')
+if retcode == 'OK':
+
+```
+
 <br>
 ###Step 3
 
