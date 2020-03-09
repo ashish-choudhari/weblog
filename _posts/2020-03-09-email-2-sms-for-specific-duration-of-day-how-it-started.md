@@ -7,26 +7,26 @@ image: assets/images/7.jpg
 ---
 > I am going to add steps how i added code from various chunks to create usable program. 
 
-> Apologies for spelling  mistakes,sometimes i add/forget words while writing in flow
+> Apologies for spelling mistakes,sometimes i add/forget words while writing in flow
 
 Step 1 to receive the mails.[here](#Step-1)
-
+<br>
 Step 2 to receive unseen mail.[here](#Step-2)
-
+<br>
 Step 3 receive mail from specific folder.[here](#Step-3)
-
+<br>
 Step 4 Loop mails needs to be processed.[here](#Step-4)
-
+<br>
 Step 5 Format mail t plain text content[here](#Step-5)
-
+<br>
 Step 6 Setup SMS gateway.[here](#Step-6)
-
+<br>
 Step 7 Schedule mail for specific duration from day.[here](#Step-7)
-
+<br>
 Step 8 mark mails to seen only apart from specific duration W/O processing.[here](#Step-8)
+<br>
 
-
-### Step 1
+###Step 1
 
 ```python
 import email
@@ -67,22 +67,29 @@ typ, data = mail.store(num,'+FLAGS','\\Seen')
 
 print (n)
 ```
+<br>
+###Step 2
 
-### Step 2
+<br>
+###Step 3
 
-### Step 3
+<br>
+###Step 4
 
-### Step 4
+<br>
+###Step 5
 
-### Step 5
+<br>
+###Step 6
 
-### Step 6
+<br>
+###Step 7
 
-### Step 7
+<br>
+###Step 8
 
-### Step 8
-
-### Step 9
+<br>
+###Step 9
 
 
 There was a time when mobile_no@carrier_id used to send Email content via SMS reasonably cheaper as was available to no day its very rare cost some extra.
