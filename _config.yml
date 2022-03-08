@@ -1,6 +1,6 @@
 # Site
-name: "TRINUS Blogg"
-title: "Trinus corporation"
+name: "Ashish Weblog"
+title: "Ashish Weblog"
 description: "blog created with Jekyll template and Github pages"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
@@ -15,9 +15,9 @@ permalink: /:title/
 authors:
   Ashish:
     name: Ashish
-    display_name: Trinus
+    display_name: Ashish
     gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: ashish_choudhari@trinus.com
+    email: ac.winsnit@gmail.com
 
 # Plugins
 plugins:
@@ -51,9 +51,9 @@ kramdown:
       line_numbers: true
 
 # Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
-adsense: "disabled"
-adsense-data-ad-client: "ca-pub-3412143450191416"
-adsense-data-ad-slot: "1363087678"
+#adsense: "disabled"
+#adsense-data-ad-client: "ca-pub-3412143450191416"
+#adsense-data-ad-slot: "1363087678"
 
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
