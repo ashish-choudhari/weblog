@@ -1,7 +1,7 @@
 #!/bin/sh
-cd /c/posts/medium/trinus-ashish.github.io
+cd /mnt/d/User/githubpages/posts/ashish.github.io
 git status
 git add .
 git commit -am "made changes"
-git push https://github.com/trinus-ashish/trinus-ashish.github.io.git master
+git push https://github.com/ashish-choudhari/weblog.git master
 echo Press Enter...
