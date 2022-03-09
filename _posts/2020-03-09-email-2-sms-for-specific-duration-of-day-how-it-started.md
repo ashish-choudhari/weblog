@@ -528,7 +528,7 @@ master.mainloop()
                
 			   
 			<p align="right">
-              <a href="">LinkedIn</a> |
+              <a href="#">LinkedIn</a> |
               <a href="#">Link 2</a> |
               <a href="#">Link 3</a>
               <br><br>
