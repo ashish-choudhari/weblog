@@ -3,7 +3,7 @@ layout: post
 title:  "Git Auto Push"
 author: Ashish
 categories: [ git, bash ]
-image: assets/images/4.jpg
+image: assets/images/18.jpg
 ---
 
 **Git auto push.sh**
