@@ -4,6 +4,7 @@ title:  "Daily server status"
 author: ashish
 categories: [ bat, Netezza,Status ]
 image: assets/images/12.jpg
+rating: 3
 ---
 Monitoring the server is very important task but if you can receive the
 status and updates daily when you wake it can be very good.
