@@ -10,11 +10,11 @@ Netezza database copy without data...
 
 [You can take backup of user and groups if there is similar setup available already.]{.underline}
 
-> /nz/support/bin/nz\_ddl\_grant\_group SRC\_DB \> ddl\_grant\_group.txt
+> /nz/support/bin/nz_ddl_grant_group SRC_DB > ddl_grant_group.txt
 
 > /nz/support/bin/nz\_ddl\_grant\_user SRC\_DB \> ddl\_grant\_users.txt
 
-> /nz/support/bin/`nz\_migrate` `-shost localhost` `-sdb SRC\_DB` `-thost localhost` `-tdb TRG\_DB` `-tuser TRG\_USER` -tpassword \'P\@s\$W0rd\' `-CreateTargetDatabase Yes` `-CreateTargetTable Yes`  `-CreateTargetUDX Yes` `-genStats full` `-SourceWhereClause` \"1=2\"
+> /nz/support/bin/`nz_migrate` `-shost localhost` `-sdb SRC_DB` `-thost localhost` `-tdb TRG_DB` `-tuser TRG_USER` -tpassword \'P\@s\$W0rd\' `-CreateTargetDatabase Yes` `-CreateTargetTable Yes`  `-CreateTargetUDX Yes` `-genStats full` `-SourceWhereClause` \"1=2\"
 
 Let Me break above command
 
