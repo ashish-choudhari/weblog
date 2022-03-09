@@ -525,13 +525,14 @@ master.mainloop()
 <div style="Margin:20px;">
             <img src="/assets/images/avatar_ashish.jpg" align="left" width="100" height="100" border="0" style="Margin:0 20px 20px 20px; background:#E79851;" />
             <p style="Margin:10px 20px 20px 20px; font:16px/1.25 sans-serif; color:#4CB3E8; text-align:justify;">
-               Trinus Corporation is a leading provider of technology solutions and services. With over two decades of experience, we enable our clients gain competitive advantage and superior business outcomes through cutting-edge, data-driven digital transformation solutions.
+               
+			   
 			<p align="right">
-              <a href="linkedin.com/in/mannara-technologies-recruitment-team-1947495b">LinkedIn</a> |
+              <a href="">LinkedIn</a> |
               <a href="#">Link 2</a> |
               <a href="#">Link 3</a>
               <br><br>
             </p>
 			</p>
 </div>
-[Ashish](mailto:ashish_choudhari@trinus.com?subject=[Trinus blogg])
+[Ashish](mailto:ashishdtl@gmail.com?subject=[Weblog])
