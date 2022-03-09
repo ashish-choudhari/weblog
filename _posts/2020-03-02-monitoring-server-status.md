@@ -4,7 +4,7 @@ title:  "Daily server status"
 author: ashish
 categories: [ bat, Netezza,Status ]
 image: assets/images/12.jpg
-tags: [red, yellow]
+tags: [Unix, Netezza]
 rating: 3
 ---
 Monitoring the server is very important task but if you can receive the
