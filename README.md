@@ -1,2 +1,2 @@
-# trinus-ashish.github.io
+# ashish-choudhari.github.io
 initial blogging
