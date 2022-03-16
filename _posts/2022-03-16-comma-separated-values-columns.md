@@ -2,7 +2,7 @@
 layout: post
 title:  "comma separated values to columns TSQL Synapse"
 author: Ashish
-categories: [ sql, bash ]
+categories: [ SQL, TSQL ]
 image: assets/images/18.gif
 ---
 
