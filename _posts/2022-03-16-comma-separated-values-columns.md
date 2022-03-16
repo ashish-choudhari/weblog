@@ -52,7 +52,7 @@ FROM (            
 CROSS APPLY d.[vals].nodes('/H/r') S(a)
 ~~~
 
-then we decided to use cross apply and pivot basically it worked work well for some time but still did not feel that right cross apply and compute to get out to get output
+then we decided to use cross apply and pivot with row_number as cardinal. it worked work well for some time but as i gathered from souces cardinal gives correct values only 99% and still did not feel that right cross apply and compute to get out to get output
 
 ~~~sql 
 
