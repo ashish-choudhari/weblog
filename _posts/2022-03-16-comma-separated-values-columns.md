@@ -92,3 +92,8 @@ FROM [ELT].[TABL] AS t
                 PIVOT(MAX(value) FOR ordinal in ([1],[2],[3],[4],[5],[6],[7],[8])) P
 
 ~~~
+Sources:
+[Source 1] (https://www.mssqltips.com/sqlservertip/6321/split-delimited-string-into-columns-in-sql-server-with-parsename/)
+[Source 2] (https://stackoverflow.com/questions/17150593/how-to-split-string-into-columns-for-a-view)
+[Source 3] (https://stackoverflow.com/questions/46413395/split-string-in-columns-by-delimiter-using-sql-server)
+[Source 4] (https://datamajor.net/mssqlsplitcolumn/)
