@@ -3,7 +3,7 @@ layout: post
 title:  "comma separated values to columns TSQL Synapse"
 author: Ashish
 categories: [ SQL, TSQL ]
-image: assets/images/18.gif
+image: assets/images/20220316.gif
 ---
 
 **CSV to columns sql**
@@ -31,8 +31,8 @@ cross apply ( select str = mt.String + ',,' ) f1
 cross apply ( select p1 = charindex( ',', str ) ) ap1
 cross apply ( select p2 = charindex( ',', str, p1 + 1 ) ) ap2
 cross apply ( select Nmame = substring( str, 1, p1-1 )                   
-                 , Surname = substring( str, p1+1, p2-p1-1 )
-          ) ParsedData
+ , Surname = substring( str, p1+1, p2-p1-1 )
+ ) ParsedData
 ~~~		  
 		  
 well, some solutions were using XML as data type transformation based on that we can separate columns into multiple but we are using online solution as data analytics and it does not support some of the SQL Server functionality so XML as data type was out of picture here
@@ -46,8 +46,8 @@ SELECT Distinct FeedbackID,
 , S.a.value('(/H/r)[4]', 'INT') AS level4
 , S.a.value('(/H/r)[5]', 'INT') AS level5
 FROM (            
-    SELECT *,CAST (N'<H><r>' + REPLACE(levelsFeed, ',', '</r><r>')  + '</r> </H>' AS XML) AS [vals]
-    FROM Feedbacks 
+ SELECT *,CAST (N'<H><r>' + REPLACE(levelsFeed, ',', '</r><r>')  + '</r> </H>' AS XML) AS [vals]
+ FROM Feedbacks 
 )  as d
 CROSS APPLY d.[vals].nodes('/H/r') S(a)
 ~~~
@@ -58,17 +58,17 @@ then we decided to use cross apply and pivot with row_number as cardinal. it wor
 
 SELECT FeedbackID, [1],[2],[3],[4],[5]
 FROM (
-    SELECT *, ROW_NUMBER() OVER (PARTITION BY feedbackID ORDER BY (SELECT  null)) as rn 
+ SELECT *, ROW_NUMBER() OVER (PARTITION BY feedbackID ORDER BY (SELECT  null)) as rn 
 FROM (
-    SELECT FeedbackID, levelsFeed
-    FROM Feedbacks 
+ SELECT FeedbackID, levelsFeed
+ FROM Feedbacks 
 ) as a
 CROSS APPLY dbo.Split(levelsFeed, ',')
 ) as SourceTable
 PIVOT
 (
-    MAX(data)
-    FOR rn IN ([1],[2],[3],[4],[5])
+ MAX(data)
+ FOR rn IN ([1],[2],[3],[4],[5])
 )as pivotable
 
 ~~~
@@ -77,19 +77,18 @@ at last we found one solution I was browsing the more into split string function
 
 
 ~~~sql 
-SELECT 
-column1
-,p.[1]
-,p.[2]
-,p.[3]
-,p.[4]
-,p.[5]
-,p.[6]
-,p.[7]
-,p.[7]
-FROM [ELT].[TABL] AS t
-                CROSS APPLY STRING_SPLIT(t.[POV],',',1)
-                PIVOT(MAX(value) FOR ordinal in ([1],[2],[3],[4],[5],[6],[7],[8])) P
+with CSV(CSV) as (select 'AA,BB,CC,DD,EE,FF,GG,HH' as CSV )
+select CSV
+ ,p.[1]
+ ,p.[2]
+ ,p.[3]
+ ,p.[4]
+ ,p.[5]
+ ,p.[6]
+ ,p.[7]
+ ,p.[8] FROM CSV AS d
+ CROSS APPLY STRING_SPLIT(d.CSV,',',1)
+ PIVOT(MAX(value) FOR ordinal in ([1],[2],[3],[4],[5],[6],[7],[8])) P
 
 ~~~
 Sources:
