@@ -92,6 +92,3 @@ FROM [ELT].[TABL] AS t
                 PIVOT(MAX(value) FOR ordinal in ([1],[2],[3],[4],[5],[6],[7],[8])) P
 
 ~~~
-
--- 
-Thanks & RegardsAshish Choudhari 9529794128ashish.choudhari@hashmapinc.com
