@@ -27,6 +27,8 @@ FROM bucketoperation AS a
 GROUP BY a.bucket
 ~~~
 
-there is more pending creating sp to dynamically load table and some more to create dynammic SOAP body but will cover that later if it comes to that.
+there is more pending creating sp to dynamically load table
+
+
 Sources:
 [Source 1](https://asktom.oracle.com/pls/apex/f%3Fp%3D100:11:0::::P11_QUESTION_ID:9543894900346291667/)
