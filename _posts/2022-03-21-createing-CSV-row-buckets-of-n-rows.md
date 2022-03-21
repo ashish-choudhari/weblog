@@ -18,7 +18,7 @@ i knew we can use STRING_AGG to create csv values challenge was to create group 
 ~~~sql 
 with selectionbucket(projectid) as (
 select distinct nullif(Projectid,'') projectid
-from TABLE (nolock) where [5460]='Staffed')
+from TABLE (nolock) )
 ,bucketoperation(projectid,bucket) as (
 select projectid, floor((row_number() over (order by  projectid ) - 1) / 4) as bucket
 from selectionbucket )
